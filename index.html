@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Workspace Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <main class="app-container">
+        
+        <header class="app-header">
+            <h1>Task Dashboard</h1>
+            <p id="date-display" class="date-text"></p>
+        </header>
+
+        <form id="todo-form" class="todo-form">
+            <input 
+                type="text" 
+                id="todo-input" 
+                placeholder="What's your focus today?..." 
+                autocomplete="off"
+                required
+            >
+            <button type="submit" aria-label="Add task" class="add-btn">
+                Add Task
+            </button>
+        </form>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-filter="active">In Progress</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="todo-list" class="todo-list">
+            </ul>
+
+        <div id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">✨</div>
+            <p>Your slate is clean. Time to design your day.</p>
+        </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
